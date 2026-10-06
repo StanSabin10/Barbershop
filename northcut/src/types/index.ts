@@ -15,16 +15,3 @@ export interface Barber {
   image: string
 }
 
-export interface BookingSelection {
-  serviceId: string
-  barberId: string
-  date: string
-  time: string
-}
-
-export interface ContactDetails {
-  name: string
-  phone: string
-  email: string
-  consent: boolean
-}

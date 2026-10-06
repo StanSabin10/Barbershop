@@ -5,8 +5,8 @@ import { site } from '../data/site'
 export function useRouteEffects() {
   const { pathname, hash } = useLocation()
   useEffect(() => {
-    const title = pathname === '/booking' ? 'Programează-te | NORTHCUT Barbershop' : 'NORTHCUT Barbershop | Ploiești'
-    const description = pathname === '/booking' ? 'Simulează o programare la NORTHCUT: alege serviciul, barberul, data și ora. Concept frontend, fără transmiterea datelor.' : site.description
+    const title = 'NORTHCUT Barbershop | Ploiești'
+    const description = site.description
     document.title = title
     document.querySelector('meta[name="description"]')?.setAttribute('content', description)
     document.querySelector('meta[property="og:title"]')?.setAttribute('content', title)

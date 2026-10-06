@@ -1,4 +1,6 @@
-# Verificare NORTHCUT V1
+# Verificare NORTHCUT V1 — istoric
+
+Acest document consemnează verificarea versiunii inițiale. Fluxul intern de programare descris mai jos a fost eliminat ulterior; site-ul direcționează acum programările către MERO.
 
 Data: 6 octombrie 2026. Build de producție Vite, testat în Chrome headless pe Windows.
 

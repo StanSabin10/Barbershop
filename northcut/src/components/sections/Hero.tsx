@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom'
 import { images } from '../../data/images'
+import { BookingLink } from '../ui/BookingLink'
 
 export function Hero() {
   return <section className="hero" id="acasa" aria-labelledby="hero-title">
@@ -8,7 +8,7 @@ export function Hero() {
       <p className="eyebrow"><span className="small-line" />BARBERSHOP · PLOIEȘTI</p>
       <h1 id="hero-title" className="display hero-title">PRECIZIE.<br />STIL.<br /><span>ATITUDINE.</span></h1>
       <p className="hero-description">Tunsori moderne, fade-uri precise și servicii de barbering într-un spațiu creat pentru bărbații care pun preț pe detalii.</p>
-      <div className="hero-buttons"><Link to="/booking" className="button button-gold">Programează-te</Link><a href="#servicii" className="text-link">Vezi serviciile</a></div>
+      <div className="hero-buttons"><BookingLink className="button button-gold">Programează-te</BookingLink><a href="#servicii" className="text-link">Vezi serviciile</a></div>
       <div className="hero-hours"><span>LUNI — SÂMBĂTĂ</span><span>09:00 — 20:00 <small> / Sâmbătă până la 18:00</small></span></div>
     </div>
     <div className="hero-caption" aria-hidden="true">THE ART OF A GOOD CUT.</div>
