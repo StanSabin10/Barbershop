@@ -1,0 +1,6 @@
+{
+  "buildCommand": "cd northcut && npm run build",
+  "outputDirectory": "northcut/dist",
+  "installCommand": "cd northcut && npm install",
+  "framework": "vite"
+}
