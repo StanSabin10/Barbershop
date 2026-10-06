@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-06",
+  "checks": [
+    "Home + booking responsive 375px",
+    "Home + booking responsive 390px",
+    "Home + booking responsive 430px",
+    "Home + booking responsive 768px",
+    "Home + booking responsive 1024px",
+    "Home + booking responsive 1440px",
+    "Home + booking responsive 1920px",
+    "Mobile navigation, Escape, focus restoration, anchor navigation",
+    "All 34 navigation and booking links valid",
+    "Mandatory selections, barber preselection, unavailable slots, validation, previous step, optional email, confirmation with ZERO requests, reset",
+    "Service query preselection, Saturday duration limits, selection change clears time",
+    "Reduced motion and 404 route"
+  ],
+  "browserErrors": []
+}

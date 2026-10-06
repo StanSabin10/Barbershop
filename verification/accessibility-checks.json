@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Home, mobile",
+    "violations": []
+  },
+  {
+    "name": "Mobile menu open",
+    "violations": []
+  },
+  {
+    "name": "Booking: service",
+    "violations": []
+  },
+  {
+    "name": "Booking: barber",
+    "violations": []
+  },
+  {
+    "name": "Booking: date",
+    "violations": []
+  },
+  {
+    "name": "Booking: time",
+    "violations": []
+  },
+  {
+    "name": "Booking: contact",
+    "violations": []
+  },
+  {
+    "name": "Booking: contact validation",
+    "violations": []
+  },
+  {
+    "name": "Booking: confirmation",
+    "violations": []
+  }
+]
