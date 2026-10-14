@@ -6,7 +6,7 @@ export function Hero() {
     <div className="hero-photo"><picture><source media="(max-width: 600px)" srcSet={images.heroMobile} /><img src={images.hero} width="1600" height="1067" alt="Barber finisând cu atenție barba unui client" fetchPriority="high" /></picture></div>
     <div className="container hero-content">
       <p className="eyebrow"><span className="small-line" />BARBERSHOP · PLOIEȘTI</p>
-      <h1 id="hero-title" className="display hero-title">PRECIZIE.<br />STIL.<br /><span>ATITUDINE.</span></h1>
+      <h1 id="hero-title" className="display hero-title"><span className="hero-title-line">PRECIZIE.</span><span className="hero-title-line">STIL.</span><span className="hero-title-line hero-title-line-outline">ATITUDINE.</span></h1>
       <p className="hero-description">Tunsori moderne, fade-uri precise și servicii de barbering într-un spațiu creat pentru bărbații care pun preț pe detalii.</p>
       <div className="hero-buttons"><BookingLink className="button button-gold">Programează-te</BookingLink><a href="#servicii" className="text-link">Vezi serviciile</a></div>
       <div className="hero-hours"><span>LUNI — SÂMBĂTĂ</span><span>09:00 — 20:00 <small> / Sâmbătă până la 18:00</small></span></div>
