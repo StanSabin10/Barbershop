@@ -5,10 +5,9 @@ import { Team } from '../components/sections/Team'
 import { Experience } from '../components/sections/Experience'
 import { Gallery } from '../components/sections/Gallery'
 import { Visit } from '../components/sections/Visit'
-import { FinalCTA } from '../components/sections/FinalCTA'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 
 export function Home() {
   useScrollReveal()
-  return <main id="main"><Hero /><Services /><About /><Team /><Experience /><Gallery /><Visit /><FinalCTA /></main>
+  return <main id="main"><Hero /><Services /><About /><Team /><Experience /><Gallery /><Visit /></main>
 }
