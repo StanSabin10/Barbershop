@@ -1,7 +1,9 @@
 export const site = {
   name: 'NORTHCUT',
   tagline: 'Modern Barbershop · Ploiești',
-  description: 'NORTHCUT este un concept modern de barbershop din Ploiești, cu servicii de tuns, fade și îngrijire a bărbii.',
+  canonicalOrigin: 'https://barbershop-northcut.vercel.app',
+  seoTitle: 'NORTHCUT Barbershop Ploiești | Tunsori, Fade și Barbă',
+  description: 'NORTHCUT Barbershop Ploiești: tunsori clasice, skin fade și îngrijirea bărbii într-un concept modern, cu precizie și atenție la detalii.',
   meroBookingUrl: 'https://mero.ro/',
   navigation: [
     { label: 'Acasă', href: '/#acasa' },
