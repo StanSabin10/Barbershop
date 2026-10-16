@@ -27,11 +27,12 @@ export function useRouteEffects() {
     frame = requestAnimationFrame(() => {
       if (hash) {
         const target = document.getElementById(decodeURIComponent(hash.slice(1)))
-        const isMobileSectionAnchor = (target?.id === 'echipa' || target?.id === 'galerie')
-          && window.matchMedia('(max-width: 767px)').matches
-        if (isMobileSectionAnchor) {
+        const isSectionAnchor = target?.id === 'echipa' || target?.id === 'galerie' || target?.id === 'contact'
+        if (isSectionAnchor) {
           const headerHeight = document.querySelector<HTMLElement>('.header')?.getBoundingClientRect().height ?? 0
-          const top = Math.max(target.getBoundingClientRect().top + window.scrollY - headerHeight, 0)
+          const isDesktopContact = target.id === 'contact' && window.matchMedia('(min-width: 768px)').matches
+          const headerOffset = isDesktopContact ? headerHeight - 30 : headerHeight
+          const top = Math.max(target.getBoundingClientRect().top + window.scrollY - headerOffset, 0)
           window.scrollTo({ top, left: 0, behavior: 'auto' })
         } else {
           target?.scrollIntoView()
