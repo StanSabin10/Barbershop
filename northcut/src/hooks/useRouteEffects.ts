@@ -55,8 +55,11 @@ export function useRouteEffects() {
             const headerHeight = document.querySelector<HTMLElement>('.header')?.getBoundingClientRect().height ?? 0
             const isDesktopContact = target.id === 'contact' && window.matchMedia('(min-width: 768px)').matches
             const isMobileServices = target.id === 'servicii' && window.matchMedia('(max-width: 767px)').matches
+            const isMobileTeam = target.id === 'echipa' && window.matchMedia('(max-width: 767px)').matches
             const headerOffset = isMobileServices
               ? headerHeight
+              : isMobileTeam
+                ? headerHeight - 20
               : isSectionAnchor
                 ? (isDesktopContact ? headerHeight - 30 : headerHeight - 5)
               : (target.id === 'acasa'

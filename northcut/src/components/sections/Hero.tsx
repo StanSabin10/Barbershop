@@ -7,11 +7,11 @@ export function Hero() {
     <div className="container hero-content">
       <p className="eyebrow"><span className="small-line" />BARBERSHOP · PLOIEȘTI</p>
       <h1 id="hero-title" className="display hero-title"><span className="hero-title-line">PRECIZIE.</span><span className="hero-title-line">STIL.</span><span className="hero-title-line hero-title-line-outline">ATITUDINE.</span></h1>
-      <p className="hero-description">Tunsori moderne, fade-uri precise și servicii de barbering într-un spațiu creat pentru bărbații care pun preț pe detalii.</p>
+      <p className="hero-description">Tunsori moderne, fade-uri precise și servicii de calitate, cu atenție la fiecare detaliu.</p>
       <div className="hero-buttons"><BookingLink className="button button-gold">Programează-te</BookingLink><a href="#servicii" className="text-link">Vezi serviciile</a></div>
       <div className="hero-hours"><span>LUNI — SÂMBĂTĂ</span><span>09:00 — 20:00 <small> / Sâmbătă până la 18:00</small></span></div>
     </div>
     <div className="hero-caption" aria-hidden="true">THE ART OF A GOOD CUT.</div>
-    <div className="hero-bottom container"><span>PRECIZIE ÎN FIECARE DETALIU.</span><a href="#servicii">DESCOPERĂ NORTHCUT <span>↓</span></a><span>01 / NORTHCUT</span></div>
+    <div className="hero-bottom container"><span>DETALII CARE FAC DIFERENȚA.</span><a href="#servicii">DESCOPERĂ NORTHCUT <span>↓</span></a><span>01 / NORTHCUT</span></div>
   </section>
 }
