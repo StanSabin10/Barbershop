@@ -49,13 +49,16 @@ export function useRouteEffects() {
     frame = requestAnimationFrame(() => {
       if (hash) {
         const target = document.getElementById(decodeURIComponent(hash.slice(1)))
-        const isSectionAnchor = target?.id === 'echipa' || target?.id === 'galerie' || target?.id === 'contact'
+        const isSectionAnchor = target?.id === 'servicii' || target?.id === 'echipa' || target?.id === 'galerie' || target?.id === 'contact'
         if (target) {
           alignSection = () => {
             const headerHeight = document.querySelector<HTMLElement>('.header')?.getBoundingClientRect().height ?? 0
             const isDesktopContact = target.id === 'contact' && window.matchMedia('(min-width: 768px)').matches
-            const headerOffset = isSectionAnchor
-              ? (isDesktopContact ? headerHeight - 30 : headerHeight - 5)
+            const isMobileServices = target.id === 'servicii' && window.matchMedia('(max-width: 767px)').matches
+            const headerOffset = isMobileServices
+              ? headerHeight
+              : isSectionAnchor
+                ? (isDesktopContact ? headerHeight - 30 : headerHeight - 5)
               : (target.id === 'acasa'
                 ? 0
                 : Number.parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) || headerHeight)
