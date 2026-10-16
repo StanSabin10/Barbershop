@@ -241,6 +241,13 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
   .footer-social { margin-left: 0; padding-top: 0; }
   .footer-bottom { flex-direction: column; gap: 8px; padding-block: 22px; }
 }
+@media (max-width: 767px) {
+  .team-section .team-grid { grid-template-columns: 1fr; gap: 38px; }
+  .team-section .team-photo-wrap { width: 75%; margin-inline: auto; }
+}
+@media (min-width: 601px) and (max-width: 767px) {
+  .team-section .team-photo-wrap { width: 55%; }
+}
 [data-reveal].reveal-pending { opacity: 0; translate: 0 18px; }
 .team-member.reveal-pending { translate: 0 20px; }
 .service-row.reveal-pending:focus-visible, .team-member.reveal-pending:focus-within { opacity: 1; translate: none; transition-delay: 0ms; }
