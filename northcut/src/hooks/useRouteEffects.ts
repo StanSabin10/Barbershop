@@ -26,7 +26,14 @@ export function useRouteEffects() {
     let scrollFrame = 0
     frame = requestAnimationFrame(() => {
       if (hash) {
-        document.getElementById(decodeURIComponent(hash.slice(1)))?.scrollIntoView()
+        const target = document.getElementById(decodeURIComponent(hash.slice(1)))
+        if (target?.id === 'echipa' && window.matchMedia('(max-width: 767px)').matches) {
+          const headerHeight = document.querySelector<HTMLElement>('.header')?.getBoundingClientRect().height ?? 0
+          const top = Math.max(target.getBoundingClientRect().top + window.scrollY - headerHeight, 0)
+          window.scrollTo({ top, left: 0, behavior: 'auto' })
+        } else {
+          target?.scrollIntoView()
+        }
         return
       }
 
