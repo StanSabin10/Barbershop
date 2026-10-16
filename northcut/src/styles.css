@@ -207,6 +207,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 @media (max-width: 900px) { .section { padding-block: 80px; } .about-grid { gap: 35px; } .values > div { grid-template-columns: 1fr; gap: 10px; } .experience-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 30px; } .team-grid { gap: 20px; } .team-member h3 { font-size: 1.3rem; } .gallery-grid { grid-template-rows: 220px 200px; gap: 14px; } .visit-grid { gap: 40px; } .footer-top { flex-wrap: wrap; } .footer-social { margin-left: auto; } }
 @media (max-width: 600px) {
   .section { padding-block: 64px; }
+  .visit-section { padding-block: 30px; }
   .section-top { gap: 20px; margin-bottom: 30px; }
   .margin-note { display: none; }
   .section-heading h2 { font-size: 3.25rem; margin: 23px 0 20px; }
@@ -232,13 +233,21 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
   .gallery-tall { grid-row: 1; grid-column: span 2; }
   .gallery-wide { grid-row: 2; }
   .gallery-grid figcaption { padding: 15px; font-size: .6rem; }
-  .visit-grid { grid-template-columns: 1fr; gap: 64px; }
-  .hours-section > h2 { font-size: 3.25rem; }
-  .contact-section { border-top: 1px solid #ffffff1a; padding-top: 45px; }
-  .contact-name { margin-top: 26px; }
+  .visit-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 18px; align-items: start; }
+  .hours-section > h2,
+  .visit-grid .section-heading h2 { font-size: clamp(2rem, 8vw, 3rem); margin: 18px 0 22px; }
+  .hours-list > div { padding-block: 10px; }
+  .visit-note { margin: 20px 0 10px; gap: 8px; font-size: .75rem; line-height: 1.6; }
+  .contact-section { border-top: 0; padding-top: 0; }
+  .contact-name { font-size: .75rem; margin: 20px 0 14px; }
+  .location-block { padding: 18px 12px; gap: 8px; align-items: flex-start; }
+  .location-block svg { width: 16px; height: 16px; }
+  .location-block p { font-size: .95rem; }
+  .contact-details { margin-top: 18px; }
+  .contact-details > div { grid-template-columns: 1fr; gap: 2px; padding: 8px 0; font-size: .75rem; }
   .footer { padding-top: 40px; }
-  .footer-top { flex-direction: column; gap: 20px; padding-bottom: 30px; }
-  .footer-social { margin-left: 0; padding-top: 0; }
+  .footer-top { flex-direction: row; align-items: flex-start; gap: 12px; padding-bottom: 30px; }
+  .footer-social { margin-left: 0; padding-top: 41px; gap: 16px; flex-wrap: wrap; justify-content: flex-end; }
   .footer-bottom { flex-direction: column; gap: 8px; padding-block: 22px; }
 }
 @media (max-width: 767px) {
