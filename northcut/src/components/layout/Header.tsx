@@ -44,17 +44,24 @@ export function Header() {
     }
     requestAnimationFrame(step)
   }
+  const handleSectionClick = (event: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    const url = new URL(href, window.location.origin)
+    if (!url.hash || url.pathname !== location.pathname) return
+
+    event.preventDefault()
+    navigate(`${url.pathname}${url.hash}`)
+  }
   return <>
     <a className="skip-link" href="#main">Sari la conținut</a>
     <header className="header">
       <div className="container header-inner">
         <Link to="/" onClick={handleHomeClick} className="wordmark" aria-label="NORTHCUT BARBERSHOP — Acasă">NORTHCUT<span>BARBERSHOP</span></Link>
-        <nav className="desktop-nav" aria-label="Navigație principală">{site.navigation.map(item => <Link key={item.label} to={item.href}>{item.label}</Link>)}</nav>
+        <nav className="desktop-nav" aria-label="Navigație principală">{site.navigation.map(item => <Link key={item.label} to={item.href} onClick={event => handleSectionClick(event, item.href)}>{item.label}</Link>)}</nav>
         <div className="header-actions"><BookingLink className="button button-gold header-booking">Programează-te</BookingLink>
           <button ref={toggle} type="button" className="menu-toggle" aria-label={open ? 'Închide meniul' : 'Deschide meniul'} aria-expanded={open} aria-controls="mobile-navigation" onClick={() => setOpen(!open)}>{open ? <X size={23} /> : <Menu size={23} />}</button>
         </div>
       </div>
-      <nav id="mobile-navigation" className="mobile-nav" aria-label="Navigație mobilă" hidden={!open}>{site.navigation.map(item => <Link key={item.label} to={item.href} onClick={() => setOpen(false)}>{item.label}</Link>)}<BookingLink className="button button-gold" onClick={() => setOpen(false)}>Programează-te</BookingLink></nav>
+      <nav id="mobile-navigation" className="mobile-nav" aria-label="Navigație mobilă" hidden={!open}>{site.navigation.map(item => <Link key={item.label} to={item.href} onClick={event => { handleSectionClick(event, item.href); setOpen(false) }}>{item.label}</Link>)}<BookingLink className="button button-gold" onClick={() => setOpen(false)}>Programează-te</BookingLink></nav>
     </header>
   </>
 }
